@@ -289,7 +289,7 @@ export default function TambahUMKMAdmin() {
               <Text style={styles.errorMsg}>Panjang minimal nama pemilik 5 karakter.</Text>
             </Animatable.View> }
 
-            <TextInput placeholder={'Deskripsi Produk'} style={styles.input} onChangeText={(value) => onChangeDeskripsi(value)} value={ data.deskripsi } />
+            <TextInput placeholder={'Deskripsi'} style={styles.input} onChangeText={(value) => onChangeDeskripsi(value)} value={ data.deskripsi } />
             { data.isValidDeskripsi ? null :
             <Animatable.View animation={'fadeInLeft'} duration={500}>
               <Text style={styles.errorMsg}>Panjang minimal deskripsi 10 karakter.</Text>
