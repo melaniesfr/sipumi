@@ -4,7 +4,7 @@ import { colors, fonts } from '../../../utils';
 
 export default function Pengaturan({ onPressTitle, title }) {
   const openGdrive = () => {
-    Linking.openURL('https://drive.google.com/file/d/1sxddldLguckyRVryosrM6Xig6RANCXzW/view?usp=sharing');
+    Linking.openURL('https://drive.google.com/file/d/1EGZJDitD2lHEVs2Ymn2WhlunrwBJh30F/view?usp=sharing');
   };
 
   return (
