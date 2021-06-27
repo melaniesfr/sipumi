@@ -244,6 +244,8 @@ export default function UpdateUMKMAdmin({ route, navigation }) {
         if (resJson === 'Ubah UMKM berhasil.') {
           Alert.alert('Success!', resJson);
           navigation.goBack();
+        } else if (resJson === 'UMKM sudah ada, silakan isi data lain.') {
+          Alert.alert('Peringatan!', resJson);
         } else {
           Alert.alert('Error!', resJson);
         }

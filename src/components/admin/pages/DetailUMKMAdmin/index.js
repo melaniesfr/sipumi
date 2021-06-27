@@ -386,8 +386,8 @@ export default function DetailUMKMAdmin({ route, navigation }) {
               'Peringatan!',
               'Anda yakin akan menghapus UMKM ini?',
               [
-                {text: 'Tidak', onPress: () => console.log('Button tidak clicked')},
-                {text: 'Ya', onPress: () => deleteData()}
+                {text: 'Ya', onPress: () => deleteData()},
+                {text: 'Tidak', onPress: () => console.log('Button tidak clicked')}
               ]
             )}
             style={styles.deleteButton}

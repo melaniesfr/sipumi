@@ -214,6 +214,8 @@ export default function EditProfil() {
 
         if (resJson === 'Edit profil sukses.') {
           Alert.alert('Success!', resJson);
+        } else if (resJson === 'Email sudah terdaftar, silakan coba lagi.') {
+          Alert.alert('Peringatan!', resJson);
         } else {
           Alert.alert('Error!', resJson);
         }

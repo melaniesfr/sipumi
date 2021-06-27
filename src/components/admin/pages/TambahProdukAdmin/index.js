@@ -134,6 +134,8 @@ export default function TambahProdukAdmin({ route, navigation }) {
     
           setAvatarSource(null);
           navigation.goBack();
+        } else if (resJson === 'Produk sudah ada, silakan isi data lain.') {
+          Alert.alert('Peringatan!', resJson);
         } else {
           Alert.alert('Error!', resJson);
         }

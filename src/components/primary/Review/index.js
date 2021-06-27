@@ -115,7 +115,14 @@ export default function Review({ data }) {
 
                   { user.nama_users === item.nama_users && token === 'userToken' ? (
                   <TouchableOpacity
-                    onPress={() => deleteReview(item.id_reviews)}
+                    onPress={() => Alert.alert(
+                      'Peringatan!',
+                      'Anda yakin akan menghapus review ini?',
+                      [
+                        {text: 'Ya', onPress: () => deleteReview(item.id_reviews)},
+                        {text: 'Tidak', onPress: () => console.log('Button tidak clicked')}
+                      ]
+                    )}
                     style={{ paddingVertical: 3, paddingHorizontal: 10, backgroundColor: colors.red, borderRadius: 5 }}
                   >
                     <Text style={{ fontFamily: fonts.primary.normal, color: colors.white }}>Hapus</Text>

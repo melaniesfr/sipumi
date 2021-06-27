@@ -256,6 +256,8 @@ export default function TambahUMKMAdmin() {
           });
     
           setAvatarSource(null);
+        } else if (resJson === 'UMKM sudah ada, silakan isi data lain.') {
+          Alert.alert('Peringatan!', resJson);
         } else {
           Alert.alert('Error!', resJson);
         }

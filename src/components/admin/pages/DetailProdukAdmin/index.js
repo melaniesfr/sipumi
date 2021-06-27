@@ -127,6 +127,8 @@ export default function DetailProdukAdmin({ route, navigation }) {
         if (resJson === 'Ubah produk berhasil.') {
           Alert.alert('Success!', resJson);
           navigation.goBack();
+        } else if (resJson === 'Produk sudah ada, silakan isi data lain.') {
+          Alert.alert('Peringatan!', resJson);
         } else {
           Alert.alert('Error!', resJson);
         }
@@ -198,8 +200,8 @@ export default function DetailProdukAdmin({ route, navigation }) {
                 'Peringatan!',
                 'Anda yakin akan menghapus produk ini?',
                 [
-                  {text: 'Tidak', onPress: () => console.log('Button tidak clicked')},
-                  {text: 'Ya', onPress: () => deleteData()}
+                  {text: 'Ya', onPress: () => deleteData()},
+                  {text: 'Tidak', onPress: () => console.log('Button tidak clicked')}
                 ]
               )}
               style={[styles.button, { backgroundColor: colors.red }]}
